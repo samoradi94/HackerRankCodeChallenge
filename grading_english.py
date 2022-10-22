@@ -16,14 +16,10 @@ import sys
 
 
 def grading_students(grades):
-    round = 0
     for grade in grades:
         residual = 5 - grade % 5
-        if grade >= 38:
-            if residual < 3:
-                round = grade + residual
-            elif residual >= 3:
-                round = grade
+        if grade >= 38 and residual < 3:
+            round = grade + residual
         else:
             round = grade
         print(round)
